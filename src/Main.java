@@ -9,6 +9,8 @@ public class Main {
         System.out.println("The Maximum number is: " + t.getMaxInteger());
         t.inputMaxFloat(sc);
         System.out.println("The Maximum number is: " + t.getMaxFloat());
-
+        t.inputMaxString(sc);
+        System.out.println("The Maximum string is: " + t.getMaxString());
+        sc.close();
     }
 }
