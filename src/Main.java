@@ -4,13 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Max t = new Max();
-        t.inputMaxInt(sc);
-        System.out.println("The Maximum number is: " + t.getMaxInteger());
-        t.inputMaxFloat(sc);
-        System.out.println("The Maximum number is: " + t.getMaxFloat());
-        t.inputMaxString(sc);
-        System.out.println("The Maximum string is: " + t.getMaxString());
-        sc.close();
+        Integer a = 1, b = 5, c = 3;
+        Max<Integer> t = new Max<>(a, b, c);
+        System.out.println(t.getMax());
     }
 }
