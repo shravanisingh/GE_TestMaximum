@@ -1,18 +1,23 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Max<T extends Comparable<T>> {
 
-    private T dt1, dt2, dt3;
+    @SafeVarargs
+    private static <T extends Comparable<T>> T testMax(T... values) {
 
-    public Max(T a, T b, T c) {
-        this.dt1 = a;
-        this.dt2 = b;
-        this.dt3 = c;
+        Arrays.sort(values);
+        return values[values.length - 1];
+    }
+    @SafeVarargs
+    public final T testMaximum(T... values) {
+        // System.out.println(values.length);
+        T value = testMax(values);
+        printMax(value);
+        return value;
+
+    }
+    private void printMax(T max) {
+        System.out.println("Max: " + max);
     }
 
-    public T getMax() {
-        T max = dt1.compareTo(dt2) > 0 ? dt1 : dt2;
-        max = max.compareTo(dt3) > 0 ? max : dt3;
-        return max;
-    }
 }
