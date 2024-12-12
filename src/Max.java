@@ -11,15 +11,12 @@ public class Max<T extends Comparable<T>> {
         }
 
         T value = testMax(values);
-        printMax(value);
+        System.out.println("Max: " + value);
         return value;
     }
     private T testMax(T... values) {
         List<T> list = Arrays.asList(values);
         Collections.sort(list);
         return list.get(list.size() - 1);
-    }
-    private void printMax(T max) {
-        System.out.println("Max: " + max);
     }
 }
